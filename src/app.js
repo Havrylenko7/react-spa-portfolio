@@ -10,21 +10,23 @@ import upbtn from './img/upbtn.png'
 import iconLogo from './img/icon-logo.png'
 import dbtn from './img/download-btn.png'
 import cvPdf from './img/cv-pdf.pdf'
-import {CopyToClipboard} from 'react-copy-to-clipboard';
+import {CopyToClipboard} from 'react-copy-to-clipboard'
 import 'react-tippy/dist/tippy.css'
-import {Tooltip} from 'react-tippy';
+import {Tooltip} from 'react-tippy'
 
-const scrollHome = () => window.scrollTo ({top: 0, behavior: "smooth"});
+const scrollHome = () => window.scrollTo ({top: 0, behavior: "smooth"})
 
-const scrollAboutMe = () => window.scrollTo ({top: 1030, behavior: "smooth"});
+const scrollAboutMe = () => window.scrollTo ({top: 1000, behavior: "smooth"})
 
-const scrollContact = () => window.scrollTo ({top: 1930, behavior: "smooth"});
+const scrollContact = () => window.scrollTo ({top: 1900, behavior: "smooth"})
+
+const refreshPage = () => window.location.reload()
 
 function App() {
   return (
     <div className='main'>
         <div className='navbar'>
-        <img className="navbar-logo" src={iconLogo} alt="0"/>
+        <img className="navbar-logo" src={iconLogo} alt="0" onClick={refreshPage}/>
           <div className="navbar-container">
             <a className="navbar-container-buttons" onClick={scrollHome} id="home">Home</a>
             <a className="navbar-container-buttons" onClick={scrollAboutMe}>About me</a>
@@ -53,7 +55,7 @@ function App() {
         </div>
         <div className="contact">
           <p className="contact-title">CONTACT</p>
-          <div className="contact-subtitle">Interested? Let's Get In Touch then!</div>
+          <div className="contact-subtitle">Interested? Let's Get In Touch!</div>
           <div className="contact-info">If you looking for a web developer, have any questions about me, or just want to say hello, feel free to contact me. I’m not really an active user of social pages but you can stay in touch with me by Telegram or email. You can find all references down below.</div>
           <div className="contact-footer">
             <div className="contact-footer-socials">

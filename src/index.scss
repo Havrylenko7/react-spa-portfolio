@@ -32,6 +32,13 @@ body {
 
   &-logo {
     margin: 5px;
+    opacity: 0.8;
+    cursor: pointer;
+
+    &:hover {
+      opacity: 2;
+      transition: 0.3s;
+    }
   }
 
   &-container {
@@ -61,6 +68,10 @@ body {
         opacity: 0.9;
         box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.1);
       }
+
+      &:not(:hover) {
+        transition: 1s;
+      }
     }
   }
 }
@@ -69,7 +80,7 @@ body {
   background: url('img/background0.jpg');
   background-size: 100% 100%;
   width: 100%;
-  height: 1080px;
+  height: 1050px;
   display: flex;
   flex-direction: column;
 
@@ -113,7 +124,7 @@ body {
     height: 80%;
     width: 80%;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     margin: 0 10%;
 
     &-own {
@@ -131,15 +142,15 @@ body {
       align-content: flex-start;
 
       &-quote {
-        font-size: calc(17px + 1.4vw);
+        font-size: calc(18px + 1.4vw);
         color: black;
         width: 100%;
         text-align: center;
       }
 
       &-info {
-        font-size: calc(9px + 0.8vw);
-        color: #3a4253;
+        font-size: calc(10px + 0.8vw);
+        color: black;
       }
 
       &-download {
@@ -156,8 +167,8 @@ body {
         align-items: center;
         color: black;
         justify-content: space-around;
-        background-color: #4fc3f7;
-        opacity: 0.85;
+        background-color: #4cc1f7;
+        opacity: 0.9;
 
         &:hover {
           background-color: #28b5f7;
@@ -165,6 +176,10 @@ body {
           opacity: 1;
           border-radius: 5px;
           box-shadow: 1px 1px 100px rgba(0, 0, 0, 0.3);
+        }
+
+        &:not(:hover) {
+          transition: 1s;
         }
 
         &-icon {
@@ -191,10 +206,14 @@ body {
         &:hover {
           background-color: #faf2d7;
           color: black;
-          transition: 1.5s;
+          transition: 1s;
           opacity: 1;
           border-radius: 5px;
           box-shadow: 1px 1px 50px #f8efd0;
+        }
+
+        &:not(:hover) {
+          transition: 1s;
         }
       }
     }
@@ -204,7 +223,7 @@ body {
 .contact {
   background-color: #ced6e0;
   padding: 0 10%;
-  height: 540px;
+  height: auto;
   width: 80%;
   display: flex;
   flex-direction: column;
@@ -233,7 +252,7 @@ body {
   }
 
   &-info {
-    font-size: calc(9px + 0.8vw);
+    font-size: calc(10px + 0.8vw);
     color: black;
     width: 100%;
     max-height: 25%;
@@ -276,9 +295,6 @@ body {
       }
     }
   }
-}
-
-#eamil {
 }
 
 @media only screen and (max-width: 769px) {
